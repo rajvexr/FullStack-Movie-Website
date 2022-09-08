@@ -1,3 +1,9 @@
-#ratingTable{
+#ratingLi{
     color: transparent;
 }
+
+#rateTable{
+    table-layout: fixed;
+    width: 80%;
+}
+

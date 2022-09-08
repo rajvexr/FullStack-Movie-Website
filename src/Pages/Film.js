@@ -46,13 +46,6 @@ export default function Film() {
           <button onClick={allFilms}>All Films</button>
       </div>
       <table id='divFilm'>
-        <tbody >
-          <tr>
-            <th id='hiddenTable'>ID</th>
-            <th id='hiddenTable'>TITLE</th>
-            <th id='hiddenTable'>DESCRIPTION</th>
-          </tr>
-        </tbody>
       </table>
 
     <h2>Film Ratings</h2>
@@ -69,8 +62,8 @@ export default function Film() {
 
     <ul>
       {returnFilm && returnFilm.map((film, i) => (
-        <li key={i} id='ratingTable'>
-          <table >
+        <li key={i} id='ratingLi'>
+          <table id='rateTable'>
             <tbody>
               <tr>
                 <td>{film.film_id}</td>
