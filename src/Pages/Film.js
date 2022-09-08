@@ -1,12 +1,33 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './style/Table.css'
 import './style/Film.css'
 
+
 export default function Film() {
+
   const [film,setFilm] = useState(null);
+
+  const [filmRating,setFilmRating] = useState(null);
+  const [returnFilm, setReturnFilms] = useState([]);
+
+  useEffect(() =>{
+
+    if(filmRating){
+      console.log(filmRating)
+      fetch(`http://localhost:8080/Home/Rating/${filmRating}`, { method: 'GET' })
+      .then(res => res.json())
+      .then(films => {
+        setReturnFilms(films)
+          
+          });
+    }  
+
+  }, [filmRating]);
+
+
   return (
     
-    <div id="film">
+<div id="film">
 
     <h2>Have Fun finding a random film :) </h2>
 
@@ -24,7 +45,6 @@ export default function Film() {
       <div id="button">
           <button onClick={allFilms}>All Films</button>
       </div>
-
       <table id='divFilm'>
         <tbody >
           <tr>
@@ -35,14 +55,41 @@ export default function Film() {
         </tbody>
       </table>
 
-    </div>
+    <h2>Film Ratings</h2>
+
+    <div>
+      <select onChange={(e) => setFilmRating(e.target.value)}>
+            <option value={0}></option>
+            <option value={1}>G</option>
+            <option value={2}>PG</option>
+            <option value={3}>PG-13</option>
+            <option value={4}>R</option>
+            <option value={5}>NC-17</option>
+      </select>
+
+    <ul>
+      {returnFilm && returnFilm.map((film, i) => (
+        <li key={i} id='ratingTable'>
+          <table >
+            <tbody>
+              <tr>
+                <td>{film.film_id}</td>
+                <td>{film.title}</td>
+                <td>{film.description}</td>
+              </tr>
+            </tbody>
+          </table>
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
   )
 }
 
 
 function randomFilm(setFilm){
 
-  // let filmDiv = document.getElementById("filmDiv")
   let id = Math.floor(Math.random() * (1000 - 1 + 1) + 1)
 
   fetch(`http://localhost:8080/Home/Film/${id}`, { method: 'GET' })
@@ -56,11 +103,9 @@ function randomFilm(setFilm){
               filmLength : film.length,
               filmReleaseYear : film.release_year,
               filmSpecial : film.special_features,
-              
-
+            
       }) 
     })
-
   }
 
 
@@ -82,11 +127,5 @@ function allFilms(){
         });
     })
 }
-
-// function filmRating(){
-  
-//   const rating = [];
-
-// }
 
 

@@ -10,17 +10,17 @@ export default function Navbar() {
         </div>
         <nav className='navbar'>
             <ul className='ul'>
-                <li>
+                <li id="liNav">
                     <Link to="/">Home</Link>
                 </li>
-                <li>
+                <li id="liNav">
                     <Link to="/film">Film</Link>
                 </li>
-                <li>
+                <li id="liNav">
                     <Link to="/category">Category</Link>
                 </li>
-                <li>
-                <Link to="/actor">Actor</Link>
+                <li id="liNav">
+                    <Link to="/actor">Actor</Link>
                 </li>
             </ul>
         </nav>
