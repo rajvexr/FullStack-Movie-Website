@@ -11,7 +11,7 @@ export default function Actor() {
       <div id="button">
           <button onClick={allActors}>All Actors</button>
       </div>
-      <div id='filmTableDiv'>
+      <div id='actorTableDiv'>
               <h2 id='ActorTableText'>Click on the button to display all the Actors</h2>
               <table id='allActorTable'>
               </table>

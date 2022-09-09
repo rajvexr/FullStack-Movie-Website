@@ -1,15 +1,81 @@
-#ActorTableDiv, #topADiv, #MADiv{
+#actorTableDiv{
     overflow-x: hidden;
     height: 300px;
     width: 1000px;
-    border: solid 5px black;
     margin-left: auto;
     margin-right: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
 }
+
+#actorTableDiv::-webkit-scrollbar{
+    display: none;
+}
+
+#topADiv{
+    overflow-x: hidden;
+    height: 300px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    position: absolute;
+    top: 120%;
+    left: 60%;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+
+#topADiv::-webkit-scrollbar{
+    display: none;
+}
+
+
+#MADiv{
+    overflow-x: hidden;
+    height: 300px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    position: absolute;
+    top: 180%;
+    left: 60%;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+
+#MADiv::-webkit-scrollbar{
+    display: none;
+}
+
 
 #allActorTable, #topA, #MA{ 
     height: 300px;
     width: 900px; 
+    color: white;
 }
 
 #ActorTableText{
