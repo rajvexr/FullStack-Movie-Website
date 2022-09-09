@@ -1,5 +1,6 @@
 import React from 'react'
 import './style/Table.css'
+import './style/actor.css'
 
 export default function Actor() {
 
@@ -8,10 +9,14 @@ export default function Actor() {
       
       <h2>list of all actors</h2>
       <div id="button">
-        <button onClick={allActors}>All Actors</button>
+          <button onClick={allActors}>All Actors</button>
       </div>
-      <table id='allActor'>
-      </table>
+      <div id='filmTableDiv'>
+              <h2 id='ActorTableText'>Click on the button to display all the Actors</h2>
+              <table id='allActorTable'>
+              </table>
+      </div>
+
 
       <h2>Top 3 Actors</h2>
       <p>click on the button to display the all the actors films they have particpated in</p>
@@ -29,16 +34,20 @@ export default function Actor() {
         <button onClick={() => topActor(3)}>Ed Chase</button>
       </div>
 
+    <div id='topADiv'>
       <table id='topA'>
       </table>
+    </div>
 
       <h2>Top Movies Actors played</h2>
       <p>click on the button to display the actors for the top current movies</p>
       <div id="button">
         <button onClick={() => topMovieActor(1)}>Academy Dinosaur</button>
       </div>
-      <table id='MA'>
-      </table>
+      <div id='MADiv'>
+        <table id='MA'>
+        </table>
+      </div>
 
     </div>
   )
@@ -46,7 +55,7 @@ export default function Actor() {
 
 function allActors(){
 
-  let actorDiv = document.getElementById("allActor")
+  let actorDiv = document.getElementById("allActorTable")
 
   fetch('http://localhost:8080/Home/allActors', { method: 'GET' })
   .then(res => res.json())

@@ -44,9 +44,12 @@ export default function Film() {
     <h2>Click on the button to display all films</h2>
       <div id="button">
           <button onClick={allFilms}>All Films</button>
+            <div id='filmTableDiv'>
+              <h2 id='filmTableText'>Click on the button to display all the films</h2>
+              <table id='allFilmTable'>
+              </table>
+            </div>
       </div>
-      <table id='divFilm'>
-      </table>
 
     <h2>Film Ratings</h2>
 
@@ -63,15 +66,17 @@ export default function Film() {
     <ul>
       {returnFilm && returnFilm.map((film, i) => (
         <li key={i} id='ratingLi'>
-          <table id='rateTable'>
-            <tbody>
-              <tr>
-                <td>{film.film_id}</td>
-                <td>{film.title}</td>
-                <td>{film.description}</td>
-              </tr>
-            </tbody>
-          </table>
+          <div id='rateTableDiv'>
+            <table id='rateTable'>
+              <tbody>
+                <tr>
+                  <td>{film.film_id}</td>
+                  <td>{film.title}</td>
+                  <td>{film.description}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </li>
       ))}
     </ul>
@@ -104,7 +109,7 @@ function randomFilm(setFilm){
 
 function allFilms(){
 
-    let filmDiv = document.getElementById("divFilm")
+    let filmDiv = document.getElementById("allFilmTable")
 
     fetch('http://localhost:8080/Home/allFilms', { method: 'GET' })
     .then(res => res.json())

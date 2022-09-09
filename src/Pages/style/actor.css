@@ -1,21 +1,18 @@
-
-#categoryButton{
-    display: flex;
-    justify-content: space-between;
-    
-}
-
-#mainTableDiv{
+#ActorTableDiv, #topADiv, #MADiv{
     overflow-x: hidden;
     height: 300px;
     width: 1000px;
-    border: solid 5px;
+    border: solid 5px black;
     margin-left: auto;
     margin-right: auto;
-    
 }
 
-#mainTable{ 
+#allActorTable, #topA, #MA{ 
     height: 300px;
     width: 900px; 
 }
+
+#ActorTableText{
+    text-align: center;
+}
+

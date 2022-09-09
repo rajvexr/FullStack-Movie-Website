@@ -8,7 +8,7 @@ export default function Category() {
 
         <h2>Welcome to the film category page!</h2>
 
-        <div id='button'>
+        <div id='categoryButton'>
 
             <div id='buttonDiv'>
             <button onClick={() => eachCategory(1)}>Action</button>
@@ -84,11 +84,14 @@ export default function Category() {
             <div id='buttonDiv'>
             <button onClick={() => eachCategory(16)}>Travel</button>
             </div>
-
-            <table id='mainTable'>
-            </table>
-            
         </div>
+
+            <div id='mainTableDiv'>
+                <table id='mainTable'>
+                </table>
+            </div>
+            
+
     </div>
   )
 }

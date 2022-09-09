@@ -1,9 +1,35 @@
-#ratingLi{
-    color: transparent;
+
+/* ////////////all film\\\\\\\\\\\\\\\\\\\ */
+
+#filmTableDiv{
+    overflow-x: hidden;
+    height: 300px;
+    width: 1000px;
+    border: solid 5px;
+    margin-left: auto;
+    margin-right: auto;
+
 }
+
+#allFilmTable{ 
+    height: 300px;
+    width: 900px; 
+}
+
+#filmTableText{
+    text-align: center;
+    
+}
+
+
+/* ////////////film rating\\\\\\\\\\\\\\\\\\\ */
 
 #rateTable{
     table-layout: fixed;
     width: 80%;
+}
+
+#ratingLi{
+    color: transparent;
 }
 
