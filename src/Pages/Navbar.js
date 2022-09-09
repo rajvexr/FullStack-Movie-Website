@@ -14,6 +14,9 @@ export default function Navbar() {
                     <Link to="/">Home</Link>
                 </li>
                 <li id="liNav">
+                    <Link to="/search">Search</Link>
+                </li>
+                <li id="liNav">
                     <Link to="/film">Film</Link>
                 </li>
                 <li id="liNav">
