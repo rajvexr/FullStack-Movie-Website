@@ -40,3 +40,7 @@ a:hover{
 .navbar{
     display: flex;
 }
+
+.active{
+    color:white;
+   }

@@ -29,31 +29,52 @@ export default function Film() {
     
 <div id="film">
 
-    <h2>Have Fun finding a random film :) </h2>
 
-    <button onClick = {() => randomFilm(setFilm) }>Random Film</button>
+    <h2>All Films</h2>
+    <p>click the button to view all the films available. Once clicked on the button, you would be able to
+      see each film with a given id, title and a film description </p>
 
-      {film ? <p>Film Id: {film.filmId}</p> : <div></div>}
-      {film ? <p>Title: {film.filmTitle}</p> : <div></div>}
-      {film ? <p>Description: {film.filmDescription}</p> : <div></div>}
-      {film ? <p>Rating: {film.filmRating}</p> : <div></div>}
-      {film ? <p>Length (Minutes): {film.filmLength}</p> : <div></div>}
-      {film ? <p>Release Year: {film.filmReleaseYear}</p> : <div></div>}
-      {film ? <p>Special Features: {film.filmSpecial}</p> : <div></div>}
+      <div id="allFilmBox">
 
-    <h2>Click on the button to display all films</h2>
-      <div id="button">
+        <div id='filmButtonDiv'>
           <button onClick={allFilms}>All Films</button>
+        </div>
+
             <div id='filmTableDiv'>
-              <h2 id='filmTableText'>Click on the button to display all the films</h2>
               <table id='allFilmTable'>
               </table>
             </div>
       </div>
 
-    <h2>Film Ratings</h2>
+    <div id='randomText'>
+    <h2 id='randomTitle'>Random Film</h2>
+    <p>click the button to view all the films available. Once clicked on the button, you would be able to
+      see each film with a given id, title and a film description</p>
+      </div>
+    <div id='randomFilmDiv'>
 
-    <div>
+      <div id='randomDiv'>
+        <button onClick = {() => randomFilm(setFilm) }>Random Film</button>
+      </div>
+
+        {film ? <p>Film Id: {film.filmId}</p> : <div></div>}
+        {film ? <p>Title: {film.filmTitle}</p> : <div></div>}
+        {film ? <p>Description: {film.filmDescription}</p> : <div></div>}
+        {film ? <p>Rating: {film.filmRating}</p> : <div></div>}
+        {film ? <p>Length (Minutes): {film.filmLength}</p> : <div></div>}
+        {film ? <p>Release Year: {film.filmReleaseYear}</p> : <div></div>}
+        {film ? <p>Special Features: {film.filmSpecial}</p> : <div></div>}
+
+    </div>
+
+    <div id='ratingText'>
+    <h2>Film Rating</h2>
+    <p>click the button to view all the films available. Once clicked on the button, you would be able to
+      see each film with a given id, title and a film description</p>
+      </div>
+
+    <div id='filmRatingDiv'>
+
       <select onChange={(e) => setFilmRating(e.target.value)}>
             <option value={0}></option>
             <option value={1}>G</option>

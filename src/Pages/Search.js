@@ -22,8 +22,8 @@ export default function Search() {
                             <ul>
                                 <li>{"Title: " + data[key].title}</li>
                                 <li>{"Description: " + data[key].description}</li>
-                                <li>{"Rating " + data[key].rating}</li>
-                                <li>{"Duration " + data[key].length + " Minutes"}</li>
+                                <li>{"Rating: " + data[key].rating}</li>
+                                <li>{"Duration: " + data[key].length + " Minutes"}</li>
                             </ul>
                             ]
                     })
@@ -40,8 +40,9 @@ export default function Search() {
 
   return (
     <div>
-        <div>
-            <input onChange={(e) => setValue(e.target.value)} value={value} type="text" placeholder='Search Movie'></input>
+        <h2 id='searchTitle'>Search for your favourite movie</h2>
+        <div id='searchBox'>
+            <input id='search' onChange={(e) => setValue(e.target.value)} value={value} type="text" placeholder='Search Movie'></input>
             <div>
                 {result.map((result, i) => (
                     <a href="#/" key={i}>

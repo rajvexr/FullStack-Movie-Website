@@ -1,18 +1,22 @@
+#film{
+    margin: 10px;
+}
 
-/* ////////////all film\\\\\\\\\\\\\\\\\\\ */
+/* ////////////all Films\\\\\\\\\\\\\\\\\\\ */
 
-#filmTableDiv{
+#allFilmBox{
     overflow-x: hidden;
-    height: 300px;
+    height: 500px;
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
 
-    position: absolute;
-    top: 60%;
-    left: 50%;
+    
+    position: relative;
+    margin-top: 280px;
+    left: 35%;
     padding: 40px;
     transform: translate(-50%, -50%);
     background: rgba(0,0,0,.5);
@@ -20,31 +24,102 @@
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
 }
-#filmTableDiv::-webkit-scrollbar{
+
+#allFilmBox::-webkit-scrollbar{
     display: none;
 }
-
 
 #allFilmTable{ 
     height: 300px;
     width: 900px; 
     color: white;
-}
+} 
 
 #filmTableText{
     text-align: center;
-    
 }
 
 
-/* ////////////film rating\\\\\\\\\\\\\\\\\\\ */
+#filmButtonDiv{
+    text-align: center;
+}
+
+/* ////////////Random Films\\\\\\\\\\\\\\\\\\\ */
+
+#randomText{
+    position: relative;
+    top: -200px;
+}
+
+
+#randomFilmDiv{
+    overflow-x: hidden;
+    height: 350px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    
+    position: relative;
+    margin-top: 0px;
+    left: 35%;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+
+#randomFilmDiv::-webkit-scrollbar{
+    display: none;
+}
+
+#randomDiv{
+    text-align: center;
+}
+
+
+/* ////////////rating film\\\\\\\\\\\\\\\\\\\ */
+
+#ratingText{
+    position: relative;
+    top: -160px;
+}
+
+#filmRatingDiv{
+    overflow-x: hidden;
+    height: 500px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    
+    position: relative;
+    margin-top: 120px;
+    left: 35%;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+
+#filmRatingDiv::-webkit-scrollbar{
+    display: none;
+}
 
 #rateTable{
     table-layout: fixed;
     width: 80%;
+    color: white;
 }
 
 #ratingLi{
     color: transparent;
 }
-

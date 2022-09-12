@@ -6,32 +6,42 @@ export default function Actor() {
 
   return (
     <div id='actorDiv'>
-      
-      <h2>list of all actors</h2>
-      <div id="button">
-          <button onClick={allActors}>All Actors</button>
-      </div>
-      <div id='actorTableDiv'>
-              <h2 id='ActorTableText'>Click on the button to display all the Actors</h2>
-              <table id='allActorTable'>
-              </table>
+
+<h2>All Actors</h2>
+    <p>click the button to view all the actor available. Once clicked on the button, you would be able to
+      see each film with a given id, title and a film description </p>
+      <div id='allActorBox'>
+
+        <div id="allActorButton">
+            <button onClick={allActors}>All Actors</button>
+        </div>
+
+        <div id='actorTableDiv'> 
+            <table id='allActorTable'>
+            </table>
+        </div>
       </div>
 
-
+    <div id='topText'>
       <h2>Top 3 Actors</h2>
       <p>click on the button to display the all the actors films they have particpated in</p>
-      <div id="button">
-        <button onClick={() => topActor(1)}>Penelope Guiness</button>
       </div>
 
+      <div id='actorButton'>
 
-      <div id="button">
-        <button onClick={() => topActor(2)}>Nick Wahlberg</button>
-      </div>
+        <div className="button">
+          <button className="aButton" onClick={() => topActor(1)}>Penelope Guiness</button>
+        </div>
 
 
-      <div id="button">
-        <button onClick={() => topActor(3)}>Ed Chase</button>
+        <div className="button">
+          <button className="aButton" onClick={() => topActor(2)}>Nick Wahlberg</button>
+        </div>
+
+
+        <div className="button">
+          <button className="aButton" onClick={() => topActor(3)}>Ed Chase</button>
+        </div>
       </div>
 
     <div id='topADiv'>
@@ -39,11 +49,18 @@ export default function Actor() {
       </table>
     </div>
 
+    <div id='movieActorText'>
       <h2>Top Movies Actors played</h2>
       <p>click on the button to display the actors for the top current movies</p>
-      <div id="button">
-        <button onClick={() => topMovieActor(1)}>Academy Dinosaur</button>
+    </div>
+    <div id='actorMovieButton'>
+
+      <div className="buttonDiv">
+        <button className='AMButton' onClick={() => topMovieActor(1)}>Academy Dinosaur</button>
       </div>
+
+    </div>
+
       <div id='MADiv'>
         <table id='MA'>
         </table>

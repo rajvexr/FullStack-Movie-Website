@@ -1,15 +1,18 @@
-#actorTableDiv{
+/* //////////All Actors\\\\\\\\\\\\\\\ */
+
+#allActorBox{
     overflow-x: hidden;
-    height: 300px;
+    height: 500px;
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
 
-    position: absolute;
-    top: 60%;
-    left: 60%;
+    
+    position: relative;
+    margin-top: 280px;
+    left: 35%;
     padding: 40px;
     transform: translate(-50%, -50%);
     background: rgba(0,0,0,.5);
@@ -18,22 +21,39 @@
     border-radius: 10px;
 }
 
-#actorTableDiv::-webkit-scrollbar{
+#allActorBox::-webkit-scrollbar{
     display: none;
+}
+
+#allActorTable{ 
+    height: 300px;
+    width: 900px; 
+    color: white;
+} 
+
+#allActorButton{
+    text-align: center;
+}
+
+/* //////////top 3 Actors\\\\\\\\\\\\\\\ */
+#topText{
+    position: relative;
+    top: -200px;
 }
 
 #topADiv{
     overflow-x: hidden;
-    height: 300px;
+    height: 500px;
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
 
-    position: absolute;
-    top: 120%;
-    left: 60%;
+    
+    position: relative;
+    margin-top: 280px;
+    left: 35%;
     padding: 40px;
     transform: translate(-50%, -50%);
     background: rgba(0,0,0,.5);
@@ -46,19 +66,67 @@
     display: none;
 }
 
+#topA{
+    height: 500px;
+    width: 900px; 
+    color: white;
+}
+
+#actorButton{
+    display: flex;
+    flex-direction: row;
+    margin-top: -200px;
+    margin-left: 400px;
+}
+
+.button{
+    width: 180px;
+    height: 70px;
+    text-align: center;
+}
+
+.button .aButton{
+    width: 100px;
+    height: 40px;
+    background: rgb(195, 195, 195);
+    border: none;
+    border-radius: 20px;
+    margin-top: 10%;
+    margin-left: 3px;
+    text-align: center;
+    transition: .4s ease-in-out;
+}
+
+.aButton:hover{
+    cursor: pointer;
+    text-decoration: none;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgb(255, 255, 255),
+                0 0 20px rgb(255, 255, 255),
+                0 0 60px rgb(255, 255, 255),
+                0 0 150px rgb(255, 255, 255);
+}
+
+/* //////////movie actors played\\\\\\\\\\\\\\\ */
+
+#movieActorText{
+    position: relative;
+    top: -200px;
+}
 
 #MADiv{
     overflow-x: hidden;
-    height: 300px;
+    height: 500px;
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
 
-    position: absolute;
-    top: 180%;
-    left: 60%;
+    
+    position: relative;
+    margin-top: 200px;
+    left: 35%;
     padding: 40px;
     transform: translate(-50%, -50%);
     background: rgba(0,0,0,.5);
@@ -71,14 +139,42 @@
     display: none;
 }
 
-
-#allActorTable, #topA, #MA{ 
-    height: 300px;
+#MA{
+    height: 500px;
     width: 900px; 
     color: white;
 }
 
-#ActorTableText{
+#actorMovieButton{
+    display: flex;
+    flex-direction: column;
+    margin-top: -200px;
+}
+
+.buttonDiv{
+    width: 180px;
+    height: 70px;
     text-align: center;
 }
 
+.buttonDiv .AMButton{
+    width: 100px;
+    height: 40px;
+    background: rgb(195, 195, 195);
+    border: none;
+    border-radius: 20px;
+    margin-top: 10%;
+    margin-left: 3px;
+    text-align: center;
+    transition: .4s ease-in-out;
+}
+
+.AMButton:hover{
+    cursor: pointer;
+    text-decoration: none;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgb(255, 255, 255),
+                0 0 20px rgb(255, 255, 255),
+                0 0 60px rgb(255, 255, 255),
+                0 0 150px rgb(255, 255, 255);
+}
