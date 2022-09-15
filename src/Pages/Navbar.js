@@ -7,23 +7,23 @@ export default function Navbar() {
     <div className='sum'>
         <div className='logo'>
             RS-MOVIES
-        </div>
-        <nav className='navbar'>
+        </div> 
+         <nav className='navbar'> 
             <ul className='ul'>
                 <li id="liNav">
-                    <NavLink to="/" >Home</NavLink>
+                    <NavLink to="/">Home</NavLink>
                 </li>
                 <li id="liNav">
-                    <NavLink to="/search" >Search</NavLink>
+                    <NavLink to="/search">Search</NavLink>
                 </li>
                 <li id="liNav">
-                    <NavLink to="/film" >Film</NavLink>
+                    <NavLink to="/film">Film</NavLink>
                 </li>
                 <li id="liNav">
-                    <NavLink to="/category" >Category</NavLink>
+                    <NavLink to="/category">Category</NavLink>
                 </li>
                 <li id="liNav">
-                    <NavLink to="/actor" >Actor</NavLink>
+                    <NavLink to="/actor">Actor</NavLink>
                 </li>
             </ul>
         </nav>

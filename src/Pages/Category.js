@@ -10,8 +10,9 @@ export default function Category() {
 
         <div id='categoryButton'>
 
+        {/* arrow function returning category method with its givin id  */}
             <div className='buttonDiv'>
-            <button className='cButton' onClick={() => eachCategory(1)}>Action</button>
+            <button className='cButton' onClick={() => eachCategory(1)}>Action</button> 
             </div>
 
 
@@ -88,25 +89,27 @@ export default function Category() {
             </div>
         </div>
 
-            <div id='mainTableDiv'>
-                <table id='mainTable'>
+            <div id='mainTableDiv'> 
+                <table id='mainTable'> {/*display each category within the table*/}
                 </table>
             </div>
             
-
     </div>
   )
 }
 
-function eachCategory(id){
+//there are 16 id's for categories
 
-    let categoryDiv = document.getElementById("mainTable")
+function eachCategory(id){ //category id passed as props
 
-    fetch(`http://localhost:8080/Home/categoryFilm/${id}`, { method: 'GET' })
-    .then(res => res.json())
-    .then(categorys=> 
+    let categoryDiv = document.getElementById("mainTable") //CategoryDiv will be used as an id to display the content in the table
+
+    fetch(`https://sakilaapp-1663062443073.azurewebsites.net/Home/categoryFilm/${id}`, { method: 'GET' }) //doller function used to refer to as get element by id fucntion
+    .then(res => res.json()) //the url will return a promise which will contain data. use the .then to convert the data to JSON
+    .then(categorys=>  //.then to display the type of data
         {
-            categoryDiv.innerHTML=""
+            //setting the innerHTML to an empty string so a new table can be generated when clicked on a different category
+            categoryDiv.innerHTML="" 
             categorys.forEach(category => {
                 categoryDiv.innerHTML += `
                                         <tr>

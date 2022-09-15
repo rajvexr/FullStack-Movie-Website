@@ -1,3 +1,8 @@
+#actorDiv{
+    margin: 10px;
+}
+
+
 /* //////////All Actors\\\\\\\\\\\\\\\ */
 
 #allActorBox{
@@ -124,9 +129,9 @@
     scrollbar-width: none;
 
     
-    position: relative;
-    margin-top: 200px;
-    left: 35%;
+    position: absolute;
+    top: 275%;
+    left: 50%;
     padding: 40px;
     transform: translate(-50%, -50%);
     background: rgba(0,0,0,.5);
@@ -149,6 +154,7 @@
     display: flex;
     flex-direction: column;
     margin-top: -200px;
+    margin-left: -20px;
 }
 
 .buttonDiv{
